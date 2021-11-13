@@ -1,0 +1,29 @@
+* {
+  margin: none;
+  padding: none;
+  text-decoration: none;
+}
+.container {
+  width: 50%;
+}
+.banner img {
+  width: 100%; 
+}
+.displayName{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.arrow{
+  display: inline;
+  width: 50px;
+}
+.displayName h1{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: large; 
+}
+.displayName h3 {
+  font-size:small;
+  margin-top: -15px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
