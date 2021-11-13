@@ -4,26 +4,33 @@
   text-decoration: none;
 }
 .container {
-  width: 50%;
+  width: 600px;
+  display: flex;
+  flex-direction: column-reverse;
 }
 .banner img {
-  width: 100%; 
+  width: 600px; 
 }
 .displayName{
   display: flex;
   flex-direction: row;
   align-items: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: large;
 }
 .arrow{
-  display: inline;
   width: 50px;
+  height: 50px;
 }
 .displayName h1{
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: large; 
+   font-size: large;
 }
 .displayName h3 {
   font-size:small;
   margin-top: -15px;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.username{
+  display: flex;
+  flex-direction: column;
+  width: 100px;
 }
