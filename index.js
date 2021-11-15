@@ -46,7 +46,9 @@ var user2 = {
     ]
 };
 
-
-
-
-
+const userName = document.querySelector('#username')
+userName.innerText = user1.userName; 
+const tweetCount = document.querySelector('#tweetCount')
+tweetCount.innerText = `${user1.tweets.length} tweets`; 
+const banner = document.querySelector('#banner')
+console.log(banner)
