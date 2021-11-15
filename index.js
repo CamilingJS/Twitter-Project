@@ -52,3 +52,11 @@ const tweetCount = document.querySelector('#tweetCount')
 tweetCount.innerText = `${user1.tweets.length} tweets`; 
 const banner = document.querySelector('#banner')
 console.log(banner)
+banner.innerHTML = `<div id="#banner" class="banner"><img src=${user1.coverPhotoURL} alt="Cover Photo">
+</div>`
+const avatar = document.querySelector('#avatar')
+avatar.innerHTML = `<div class="avatar" id="avatar">
+<img src=${user1.avatarURL} alt="Default profile photo">
+</div>`
+
+
