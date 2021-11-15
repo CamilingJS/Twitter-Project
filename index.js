@@ -46,17 +46,52 @@ var user2 = {
     ]
 };
 
-const userName = document.querySelector('#username')
-userName.innerText = user1.userName; 
+
+function user(user){
+    const userName = document.querySelector('#username')
+userName.innerText = user.displayName; 
 const tweetCount = document.querySelector('#tweetCount')
-tweetCount.innerText = `${user1.tweets.length} tweets`; 
+tweetCount.innerText = `${user.tweets.length} tweets`; 
 const banner = document.querySelector('#banner')
 console.log(banner)
-banner.innerHTML = `<div id="#banner" class="banner"><img src=${user1.coverPhotoURL} alt="Cover Photo">
+banner.innerHTML = `<div id="#banner" class="banner"><img src=${user.coverPhotoURL} alt="Cover Photo">
 </div>`
 const avatar = document.querySelector('#avatar')
 avatar.innerHTML = `<div class="avatar" id="avatar">
-<img src=${user1.avatarURL} alt="Default profile photo">
+<img src=${user.avatarURL} alt="Default profile photo">
 </div>`
+
+const name1 = document.querySelector('#name')
+name1.innerText = user.displayName;
+const handler = document.querySelector('#handler')
+handler.innerText = user.userName;
+
+const joined = document.querySelector('#joined')
+joined.innerHTML = `<h3>📅 Joined ${user.joinedDate}</h3>`
+const follow = document.querySelector('#follow')
+follow.innerHTML = `<h3>${user.followingCount}</h3><h3>Following</h3>
+<h3>${user.followerCount}</h3><h3>Followers</h3>`
+
+const tweetContainer = document.querySelector('#tweetContainer')
+tweetContainer.innerHTML = `
+<img src=${user.avatarURL} alt="avatar">
+<div>
+  <h3>${user.displayName}</h3>
+  <h3>${user.userName}</h3>
+  <h3>${user.tweets.map(tweet=>{
+      tweet.text; 
+  })}</h3>
+</div>
+`
+
+}
+user(user2)
+
+
+
+
+
+
+
 
 
