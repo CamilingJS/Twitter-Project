@@ -119,7 +119,7 @@
   display: flex;
   justify-content: flex-start;
   flex-direction: row;
-  transform: translateY(-150px)
+  
 }
 .tweetContainer img {
   width: 50px;
@@ -141,4 +141,7 @@
   transform: translateY(-20px);
 }
 
+.tweetBox {
+  transform: translateY(-180px);
+}
 

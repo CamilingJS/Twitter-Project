@@ -74,18 +74,27 @@ follow.innerHTML = `<h3>${user.followingCount}</h3><h3>Following</h3>
 
 const tweetContainer = document.querySelector('#tweetContainer')
 tweetContainer.innerHTML = `
-<img src=${user.avatarURL} alt="avatar">
-<div>
-  <h3>${user.displayName}</h3>
-  <h3>${user.userName}</h3>
-  <h3>${user.tweets.map(tweet=>{
-      tweet.text; 
-  })}</h3>
-</div>
+  <div class="tweetBox" >
+        ${user.tweets.map(tweet=>{
+            return `
+            <div class="tweetContainer" >
+                <img src=${user.avatarURL} alt="avatar">
+                <div>
+                    <h3>${user.displayName}</h3>
+                    <h3>${user.userName}</h3>
+                    <h3> ${tweet.text} </h3>
+                <div>  
+            </div>
+            `
+        })}
+  <div>
+  
 `
 
+
+
 }
-user(user2)
+user(user1)
 
 
 
