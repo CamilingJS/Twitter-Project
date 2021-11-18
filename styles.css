@@ -119,7 +119,7 @@
   display: flex;
   justify-content: flex-start;
   flex-direction: row;
-  
+  transform: translateY(-180px);
 }
 .tweetContainer img {
   width: 50px;

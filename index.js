@@ -72,29 +72,25 @@ const follow = document.querySelector('#follow')
 follow.innerHTML = `<h3>${user.followingCount}</h3><h3>Following</h3>
 <h3>${user.followerCount}</h3><h3>Followers</h3>`
 
-const tweetContainer = document.querySelector('#tweetContainer')
-tweetContainer.innerHTML = `
-  <div class="tweetBox" >
-        ${user.tweets.map(tweet=>{
-            return `
-            <div class="tweetContainer" >
-                <img src=${user.avatarURL} alt="avatar">
-                <div>
-                    <h3>${user.displayName}</h3>
-                    <h3>${user.userName}</h3>
-                    <h3> ${tweet.text} </h3>
-                <div>  
-            </div>
-            `
-        })}
-  <div>
-  
-`
+const tweetContainer = document.querySelector('.container')
+user.tweets.forEach(tweet=>{
+    const appendTweet = `
+    <div class="tweetContainer" >
+        <img src=${user.avatarURL} alt="avatar">
+        <div>
+            <h3>${user.displayName}</h3>
+            <h3>${user.userName}</h3>
+            <h3> ${tweet.text} </h3>
+        <div>  
+    </div>
+    `
+    tweetContainer.innerHTML  += appendTweet
+})
 
 
 
 }
-user(user1)
+user(user2)
 
 
 
